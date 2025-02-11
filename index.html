@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive C++ Revision</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Revision Sheet: C++ Functions</h1>
+        <p>Hey there, future software engineers! 🚀</p>
+    </header>
+    
+    <section id="function-format" class="content-section">
+        <h2>1️⃣ Function Format (Type, Name, Argument, Statement)</h2>
+        <p>A function is like a recipe: it takes ingredients (arguments), follows steps (statements), and serves a dish (return type).</p>
+        <pre><code>ReturnType FunctionName(Parameters) {
+    // Statements (The magic happens here)
+    return value; // If needed
+}</code></pre>
+    </section>
+    
+    <section id="prototyping" class="content-section">
+        <h2>2️⃣ Prototyping Functions</h2>
+        <p>Function prototypes tell the compiler what to expect before the function is defined.</p>
+        <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Function Prototype
+void greet();
+
+int main() {
+    greet();
+    return 0;
+}
+
+// Function Definition
+void greet() {
+    cout << "Hello, C++ Wizards!" << endl;
+}</code></pre>
+    </section>
+    
+    <section id="overloading" class="content-section">
+        <h2>3️⃣ Overloaded Functions</h2>
+        <p>Function Overloading = Same name, different parameters.</p>
+        <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void print(int x) { cout << "Integer: " << x << endl; }
+void print(double x) { cout << "Double: " << x << endl; }
+void print(string x) { cout << "String: " << x << endl; }
+
+int main() {
+    print(10);
+    print(5.5);
+    print("Hello!");
+    return 0;
+}</code></pre>
+    </section>
+    
+    <section id="recursion" class="content-section">
+        <h2>4️⃣ Recursion</h2>
+        <p>Recursion is like looking into two mirrors—endless reflections! 🪞</p>
+        <pre><code>int factorial(int n) {
+    if (n == 0) return 1; // Base case
+    return n * factorial(n - 1);
+}</code></pre>
+    </section>
+    
+    <section id="quiz" class="content-section">
+        <h2>🎯 Quick Quiz: Test Your Knowledge!</h2>
+        <ol>
+            <li>What is the purpose of a function prototype?</li>
+            <li>What will happen if a function prototype and definition have different return types?</li>
+            <li>What is function overloading?</li>
+            <li>What is the base case in recursion?</li>
+            <li>What happens if a function calls itself without a base case?</li>
+        </ol>
+    </section>
+    
+    <section id="future-predictor" class="content-section">
+        <h2>🔮 Future Predictor</h2>
+        <p>Answer the questions attentively, and this AI-powered predictor will tell you your future in the software development world!</p>
+        <form id="predictor-form">
+            <label for="language">Which coding language do you like the most?</label>
+            <select id="language">
+                <option value="Python">Python</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+            
+            <label for="projects">What type of projects excite you?</label>
+            <select id="projects">
+                <option value="AI & Machine Learning">AI & Machine Learning</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Game Development">Game Development</option>
+            </select>
+            
+            <label for="strength">What’s your biggest strength as a coder?</label>
+            <select id="strength">
+                <option value="Debugging">Debugging</option>
+                <option value="Writing clean code">Writing clean code</option>
+                <option value="Copy-pasting from Stack Overflow">Copy-pasting from Stack Overflow</option>
+                <option value="Working under pressure">Working under pressure</option>
+            </select>
+            
+            <label for="company">What’s your dream tech company?</label>
+            <select id="company">
+                <option value="Google">Google</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="Tesla">Tesla</option>
+                <option value="A startup in my basement">A startup in my basement</option>
+            </select>
+            
+            <label for="bugs">How do you handle coding bugs?</label>
+            <select id="bugs">
+                <option value="I patiently debug them">I patiently debug them</option>
+                <option value="I rewrite the whole thing from scratch">I rewrite the whole thing from scratch</option>
+                <option value="I blame the compiler">I blame the compiler</option>
+                <option value="I cry in a corner">I cry in a corner</option>
+            </select>
+            
+            <button type="submit">Predict My Future!</button>
+        </form>
+        <p id="prediction-result"></p>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
